@@ -2,7 +2,7 @@
 
 > **跨所有主题通用**。主题专属组件（引言卡、章节标题、签名等）读各自主题库；本文件提供三类**所有主题都需要**的组件：代码块、图片/GIF、小标签标题。
 >
-> **配色占位**：下面用红白色系（主色 `#DC2626`、浅底 `#FEF2F2`、浅标 `#FEE2E2`、深字 `#991B1B`）做示例。换其它主题时，把这几个值替换为该主题"设计变量速查表"里的对应色；代码块深色版各主题可共用，浅色版用主题主色做左竖条。
+> **配色占位**：下面用红白色系（主色 `#1B5BEE`、浅底 `#EFF6FF`、浅标 `#DBEAFE`、深字 `#1E293B`）做示例。换其它主题时，把这几个值替换为该主题"设计变量速查表"里的对应色；代码块深色版各主题可共用，浅色版用主题主色做左竖条。
 >
 > **平台限制**：同主题库——禁 `<style>/<script>/class/id/div/position/float/@media/grid`，只用内联 + `flex`，文字全部 `<span leaf="">` 包裹。
 
@@ -35,7 +35,7 @@
 ### 1b. 浅色代码块（适配浅色温和主题，如玫瑰粉/天蓝/焦糖棕）
 
 ```html
-<section style="margin:0 0 20px;border-radius:8px;overflow:hidden;background:#F6F8FA;border:1px solid #E5E7EB;border-left:3px solid #DC2626;">
+<section style="margin:0 0 20px;border-radius:8px;overflow:hidden;background:#F6F8FA;border:1px solid #E5E7EB;border-left:3px solid #1B5BEE;">
   <section style="padding:7px 14px;border-bottom:1px solid #E5E7EB;">
     <span style="font-size:12px;color:#9CA3AF;font-family:Consolas,Monaco,monospace;letter-spacing:1px;"><span leaf="">bash</span></span>
   </section>
@@ -45,15 +45,15 @@
 </section>
 ```
 
-（左竖条 `#DC2626` 换成当前主题主色；多行同 1a：每行一个 `<p style="margin:0">`，不用 `white-space:pre`，缩进用全角空格 `　`。）
+（左竖条 `#1B5BEE` 换成当前主题主色；多行同 1a：每行一个 `<p style="margin:0">`，不用 `white-space:pre`，缩进用全角空格 `　`。）
 
 ### 1c. 行内代码（正文中的 `code` 短片段）
 
 ```html
-<span style="background:#F1F5F9;color:#DC2626;padding:1px 6px;border-radius:4px;font-family:'SF Mono',Consolas,Monaco,monospace;font-size:14px;"><span leaf="">SKILL.md</span></span>
+<span style="background:#F1F5F9;color:#1B5BEE;padding:1px 6px;border-radius:4px;font-family:'SF Mono',Consolas,Monaco,monospace;font-size:14px;"><span leaf="">SKILL.md</span></span>
 ```
 
-（文字色 `#DC2626` 换主题主色；底色保持中性浅灰。）
+（文字色 `#1B5BEE` 换主题主色；底色保持中性浅灰。）
 
 ---
 
@@ -87,12 +87,12 @@
   </section>
 </section>
 <p style="text-align:center;margin:0 0 24px;">
-  <span style="display:inline-block;background:#FEE2E2;color:#991B1B;font-size:11px;font-weight:700;padding:1px 8px;border-radius:4px;margin-right:6px;"><span leaf="">GIF 动图</span></span>
+  <span style="display:inline-block;background:#DBEAFE;color:#1E293B;font-size:11px;font-weight:700;padding:1px 8px;border-radius:4px;margin-right:6px;"><span leaf="">GIF 动图</span></span>
   <span style="font-size:12px;color:#9CA3AF;"><span leaf="">动图说明文字</span></span>
 </p>
 ```
 
-（角标底色 `#FEE2E2` → 主题浅底色，字色 `#991B1B` → 主题深字色，取自该主题"设计变量速查表"；无色块的极简主题改用细线描边胶囊：边框与字色用主题主色、背景透明。）若原文只写了图片但没给 URL，用 `src="图片URL"` 占位并在交付时提醒用户补图，**不要凭空编造图床链接**。
+（角标底色 `#DBEAFE` → 主题浅底色，字色 `#1E293B` → 主题深字色，取自该主题"设计变量速查表"；无色块的极简主题改用细线描边胶囊：边框与字色用主题主色、背景透明。）若原文只写了图片但没给 URL，用 `src="图片URL"` 占位并在交付时提醒用户补图，**不要凭空编造图床链接**。
 
 ---
 
@@ -121,15 +121,15 @@
 > **使用优先级**：先查所选主题库的映射规则——主题库有等价语义组件（自己的金句块/提示块/小标题）就用主题库版本保持气质一致；没有时才用本节组件并按下面规则换色。
 >
 > **换色规则**（示例为红白色值，按所选主题"设计变量速查表"替换）：
-> - 3a 左竖条 `#DC2626` → 主题主色；3b 药丸底 `#DC2626` → 主题主色（字保持白）
-> - 3c 序号药丸底 `#FEE2E2` → 主题浅底色，序号字 `#991B1B` → 主题深字色
-> - 3d/3e 块底 `#FEF2F2` → 主题浅底色，竖条/类型标签 `#DC2626` → 主题主色
+> - 3a 左竖条 `#1B5BEE` → 主题主色；3b 药丸底 `#1B5BEE` → 主题主色（字保持白）
+> - 3c 序号药丸底 `#DBEAFE` → 主题浅底色，序号字 `#1E293B` → 主题深字色
+> - 3d/3e 块底 `#EFF6FF` → 主题浅底色，竖条/类型标签 `#1B5BEE` → 主题主色
 > - **无色块的极简主题**（留白禅意/石墨极简等）：3a 竖条细化为 `2–3px`，3d/3e 去掉底色、只留左竖条 + 大留白，贴合该主题气质。
 
 ### 3a. 左竖条小标题（最推荐，干净）
 
 ```html
-<p style="margin:28px 0 14px;font-size:16px;font-weight:800;color:#1C1917;line-height:1.5;border-left:4px solid #DC2626;padding-left:12px;">
+<p style="margin:28px 0 14px;font-size:16px;font-weight:800;color:#1E293B;line-height:1.5;border-left:4px solid #1B5BEE;padding-left:12px;">
   <span leaf="">小标题文字</span>
 </p>
 ```
@@ -138,15 +138,15 @@
 
 ```html
 <p style="margin:28px 0 14px;">
-  <span style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:14px;font-weight:700;padding:5px 16px;border-radius:6px;"><span leaf="">小标题文字</span></span>
+  <span style="display:inline-block;background:#1B5BEE;color:#FFFFFF;font-size:14px;font-weight:700;padding:5px 16px;border-radius:6px;"><span leaf="">小标题文字</span></span>
 </p>
 ```
 
 ### 3c. 序号药丸 + 标题（清单/步骤）
 
 ```html
-<p style="margin:24px 0 12px;font-size:15px;font-weight:800;color:#1C1917;line-height:1.6;">
-  <span style="display:inline-block;background:#FEE2E2;color:#991B1B;border-radius:5px;padding:1px 9px;margin-right:8px;font-weight:900;"><span leaf="">01</span></span>
+<p style="margin:24px 0 12px;font-size:15px;font-weight:800;color:#1E293B;line-height:1.6;">
+  <span style="display:inline-block;background:#DBEAFE;color:#1E293B;border-radius:5px;padding:1px 9px;margin-right:8px;font-weight:900;"><span leaf="">01</span></span>
   <span leaf="">要点标题</span>
 </p>
 ```
@@ -154,8 +154,8 @@
 ### 3d. 金句引用（左竖条版，取代旧的虚线框金句）
 
 ```html
-<section style="margin:0 0 24px;background:#FEF2F2;border-radius:0 10px 10px 0;border-left:4px solid #DC2626;padding:16px 20px;">
-  <p style="font-size:16px;font-weight:800;color:#991B1B;margin:0;line-height:1.8;">
+<section style="margin:0 0 24px;background:#EFF6FF;border-radius:0 10px 10px 0;border-left:4px solid #1B5BEE;padding:16px 20px;">
+  <p style="font-size:16px;font-weight:800;color:#1E293B;margin:0;line-height:1.8;">
     <span leaf="">「这里是核心观点或关键金句」</span>
   </p>
 </section>
@@ -164,9 +164,9 @@
 ### 3e. 提示 / 旁注块（左竖条 + 类型小标签，取代旧的虚线提示框）
 
 ```html
-<section style="margin:0 0 24px;background:#FEF2F2;border-radius:0 8px 8px 0;border-left:4px solid #DC2626;padding:14px 18px;">
+<section style="margin:0 0 24px;background:#EFF6FF;border-radius:0 8px 8px 0;border-left:4px solid #1B5BEE;padding:14px 18px;">
   <p style="margin:0 0 6px;">
-    <span style="display:inline-block;background:#DC2626;color:#FFFFFF;font-size:11px;font-weight:700;padding:2px 10px;border-radius:4px;letter-spacing:1px;"><span leaf="">提示</span></span>
+    <span style="display:inline-block;background:#1B5BEE;color:#FFFFFF;font-size:11px;font-weight:700;padding:2px 10px;border-radius:4px;letter-spacing:1px;"><span leaf="">提示</span></span>
   </p>
   <p style="font-size:14px;color:#374151;margin:0;line-height:1.8;">
     <span leaf="">提示或旁注的正文内容</span>

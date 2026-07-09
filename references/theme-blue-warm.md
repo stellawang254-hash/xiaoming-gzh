@@ -1,6 +1,6 @@
 # 公众号排版组件库 —— 蓝橙简约
 
-> **设计风格**：简约克制，蓝橙棕三色系统。蓝色（#2563EB）做主色用于锚点，橙色（#D97706）做点缀高亮，暖棕色（#4A3728）做正文。留白充沛，边框细淡，无重阴影。适合教程、深度分析、观点、知识整理类文章。
+> **设计风格**：简约克制，蓝橙棕三色系统。蓝色（#1B5BEE）做主色用于锚点，橙色（#D97706）做点缀高亮，暖棕色（#4A3728）做正文。留白充沛，边框细淡，无重阴影。适合教程、深度分析、观点、知识整理类文章。
 
 > **公众号平台限制须知**：
 > - ❌ 不支持 `<style>`/`<script>`、CSS class/id、`position:fixed/absolute`、`float`、`@media`/`@keyframes`、`display:grid`
@@ -16,7 +16,7 @@
 ## 设计变量速查表
 
 ```
-主色（蓝）：     #2563EB    锚点、封面标题、关键元素
+主色（蓝）：     #1B5BEE    锚点、封面标题、关键元素
 强调色（橙）：   #D97706    高亮、标签、强调
 正文色（棕）：   #4A3728    正文，温暖耐读
 
@@ -60,6 +60,29 @@
 
 ---
 
+## 组件 1b 关注引导横幅 follow-banner
+
+> **用途**：文章顶部引导读者点击关注。格式仿自公众号实际排版，棕色字 #7E342E，斜体加粗，居中。
+> **放置位置**：封面之前，即正文最顶部。
+> **使用规则**：每篇文章最多一条，优先级高于封面。如原文已有类似引导则不重复生成。
+
+```html
+<section style="margin-bottom:24px;display:flex;justify-content:flex-start;align-items:flex-end;">
+  <section style="width:61px;flex-shrink:0;">
+    <span leaf=""><span leaf=""><br></span></span>
+  </section>
+  <section style="margin-left:-26px;background:#FFF9F3;padding:10px 42px;box-sizing:border-box;border-radius:4px;">
+    <p style="color:#7E342E;font-size:15px;letter-spacing:2px;text-align:center;margin:0;">
+      <em><strong><span leaf="">点击上方蓝字，关注我们</span></strong></em>
+    </p>
+  </section>
+</section>
+```
+
+> **贴士**：`margin-left:-26px` 使文字区域向左覆盖装饰图标的位置，模拟公众号实际文章的叠层效果。无 GIF 动图装饰时可直接省略第一个 `<section>`。
+
+---
+
 ## 组件 2 封面 cover-breaking
 
 > **文案策略**：封面标题和公众号外标题是两层标题，必须视角错开。封面标题从五个视角（数字反差/角色革命/案例串/方法论/情绪钩子）自选一个直出。
@@ -67,20 +90,20 @@
 **无右侧图片版（推荐，更简约）**：
 
 ```html
-<section style="margin:0 0 32px;background:#fff;border:1px solid rgba(37,99,235,0.12);border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.04);width:100%;">
+<section style="margin:0 0 32px;background:#fff;border:1px solid  rgba(27,91,238,0.12);border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.04);width:100%;">
   <section style="padding:32px 28px 20px;">
     <section style="display:flex;align-items:center;gap:8px;margin-bottom:20px;">
-      <span style="width:6px;height:6px;background:#2563EB;border-radius:50%;"><span leaf=""><br></span></span>
-      <span style="font-size:11px;font-weight:700;letter-spacing:3px;color:#2563EB;"><span leaf="">{{顶部标签}}</span></span>
-      <section style="flex:1;height:1px;overflow:hidden;background:linear-gradient(to right,rgba(37,99,235,0.1),transparent);"><span leaf=""><br></span></section>
+      <span style="width:6px;height:6px;background:#1B5BEE;border-radius:50%;"><span leaf=""><br></span></span>
+      <span style="font-size:11px;font-weight:700;letter-spacing:3px;color:#1B5BEE;"><span leaf="">{{顶部标签}}</span></span>
+      <section style="flex:1;height:1px;overflow:hidden;background:linear-gradient(to right,rgba(27,91,238,0.1),transparent);"><span leaf=""><br></span></section>
       <span style="font-size:10px;color:#D1D5DB;font-weight:600;"><span leaf="">{{日期}}</span></span>
     </section>
     <section>
       <p style="font-size:24px;font-weight:900;color:#1E293B;margin:0 0 12px;line-height:1.2;letter-spacing:-1px;">
         <span leaf="">{{主标题}}</span>
-        <span style="color:#2563EB;"><span leaf="">{{蓝色高亮词}}</span></span>
+        <span style="color:#1B5BEE;"><span leaf="">{{蓝色高亮词}}</span></span>
       </p>
-      <section style="width:36px;height:3px;background:#2563EB;border-radius:2px;margin-bottom:12px;">
+      <section style="width:36px;height:3px;background:#1B5BEE;border-radius:2px;margin-bottom:12px;">
         <span leaf=""><br></span>
       </section>
       <p style="font-size:13px;color:#9CA3AF;margin:0;line-height:1.7;">
@@ -88,7 +111,7 @@
       </p>
     </section>
   </section>
-  <section style="background:#2563EB;padding:10px 28px;display:flex;align-items:center;justify-content:space-between;">
+  <section style="background:#1B5BEE;padding:10px 28px;display:flex;align-items:center;justify-content:space-between;">
     <p style="font-size:12px;color:rgba(255,255,255,0.9);margin:0;font-weight:600;letter-spacing:0.5px;">
       <span leaf="">{{底部左侧文字}}</span>
     </p>
@@ -103,33 +126,33 @@
 **有右侧图片版**（有封面头像图时使用）：
 
 ```html
-<section style="margin:0 0 32px;background:#fff;border:1px solid rgba(37,99,235,0.12);border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.04);width:100%;">
+<section style="margin:0 0 32px;background:#fff;border:1px solid  rgba(27,91,238,0.12);border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.04);width:100%;">
   <section style="padding:32px 28px 20px;">
     <section style="display:flex;align-items:center;gap:8px;margin-bottom:20px;">
-      <span style="width:6px;height:6px;background:#2563EB;border-radius:50%;"><span leaf=""><br></span></span>
-      <span style="font-size:11px;font-weight:700;letter-spacing:3px;color:#2563EB;"><span leaf="">{{顶部标签}}</span></span>
-      <section style="flex:1;height:1px;overflow:hidden;background:linear-gradient(to right,rgba(37,99,235,0.1),transparent);"><span leaf=""><br></span></section>
+      <span style="width:6px;height:6px;background:#1B5BEE;border-radius:50%;"><span leaf=""><br></span></span>
+      <span style="font-size:11px;font-weight:700;letter-spacing:3px;color:#1B5BEE;"><span leaf="">{{顶部标签}}</span></span>
+      <section style="flex:1;height:1px;overflow:hidden;background:linear-gradient(to right,rgba(27,91,238,0.1),transparent);"><span leaf=""><br></span></section>
       <span style="font-size:10px;color:#D1D5DB;font-weight:600;"><span leaf="">{{日期}}</span></span>
     </section>
     <section style="display:flex;align-items:center;gap:20px;">
       <section style="flex:1;min-width:0;">
         <p style="font-size:24px;font-weight:900;color:#1E293B;margin:0 0 12px;line-height:1.2;letter-spacing:-1px;">
           <span leaf="">{{主标题}}</span>
-          <span style="color:#2563EB;"><span leaf="">{{蓝色高亮词}}</span></span>
+          <span style="color:#1B5BEE;"><span leaf="">{{蓝色高亮词}}</span></span>
         </p>
-        <section style="width:36px;height:3px;background:#2563EB;border-radius:2px;margin-bottom:12px;">
+        <section style="width:36px;height:3px;background:#1B5BEE;border-radius:2px;margin-bottom:12px;">
           <span leaf=""><br></span>
         </section>
         <p style="font-size:13px;color:#9CA3AF;margin:0;line-height:1.7;">
           <span leaf="">{{副标题}}</span>
         </p>
       </section>
-      <section style="flex-shrink:0;width:100px;height:100px;border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#EFF6FF,#DBEAFE);display:flex;align-items:center;justify-content:center;border:1px solid rgba(37,99,235,0.08);">
+      <section style="flex-shrink:0;width:100px;height:100px;border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#EFF6FF,#DBEAFE);display:flex;align-items:center;justify-content:center;border:1px solid  rgba(27,91,238,0.08);">
         <!-- 封面右侧图片，保留原图代码 -->
       </section>
     </section>
   </section>
-  <section style="background:#2563EB;padding:10px 28px;display:flex;align-items:center;justify-content:space-between;">
+  <section style="background:#1B5BEE;padding:10px 28px;display:flex;align-items:center;justify-content:space-between;">
     <p style="font-size:12px;color:rgba(255,255,255,0.9);margin:0;font-weight:600;"><span leaf="">{{底部左侧文字}}</span></p>
     <section style="display:flex;gap:4px;">
       <span style="background:rgba(255,255,255,0.15);padding:1px 6px;border-radius:3px;font-size:8px;color:#fff;"><span leaf="">{{标签1}}</span></span>
@@ -156,7 +179,7 @@
   </section>
   <section style="overflow-x:scroll;-webkit-overflow-scrolling:touch;white-space:nowrap;padding-bottom:8px;">
     <!-- 第一个（当前高亮，蓝色背景） -->
-    <section style="display:inline-block;white-space:normal;vertical-align:top;width:110px;background:#2563EB;border-radius:12px;padding:12px;margin-right:8px;">
+    <section style="display:inline-block;white-space:normal;vertical-align:top;width:110px;background:#1B5BEE;border-radius:12px;padding:12px;margin-right:8px;">
       <p style="font-size:9px;font-weight:700;color:rgba(255,255,255,0.7);letter-spacing:1px;margin:0 0 5px;"><span leaf="">PART 01</span></p>
       <p style="font-size:13px;font-weight:800;color:#fff;margin:0 0 3px;"><span leaf="">{{章节名}}</span></p>
       <p style="font-size:10px;color:rgba(255,255,255,0.7);margin:0;"><span leaf="">{{副标题}}</span></p>
@@ -179,33 +202,39 @@
 
 ---
 
-## 组件 4 章节标题 chapter-title
+## 组件 4 章节标题 chapter-title（蓝底矩形块风格）
 
-第一个章节用 `margin-top:16px`，后续章节用 `margin-top:48px`。最后一章编号用 `///`，PART 改为 `LAST`。
+> **风格说明**：采用蓝底白字矩形块，仿公众号实际排版风格。主色 `#1B5BEE`，字号 15px，圆角 4px。
+> **间距**：第一个章节用 `margin-top:16px`，后续章节用 `margin-top:48px`。
+> **末章变体**：最后一章编号用 `///`，PART 改为 `LAST`，章名自动用"写在最后"。
 
 ```html
-<section style="margin-top:48px;margin-bottom:32px;padding:0 20px;">
-  <section style="display:flex;align-items:center;gap:14px;margin-bottom:24px;">
-    <section style="text-align:center;flex-shrink:0;">
-      <p style="margin:0;font-size:26px;font-weight:900;color:#2563EB;line-height:1;letter-spacing:-2px;">
-        <span leaf="">{{01}}</span>
-      </p>
-      <p style="margin:0;font-size:8px;font-weight:700;color:#D1D5DB;letter-spacing:2px;">
-        <span leaf="">PART</span>
-      </p>
-    </section>
-    <span style="width:1px;height:32px;background:#E2DDD8;flex-shrink:0;"><span leaf=""><br></span></span>
-    <section>
-      <p style="margin:0 0 1px;font-size:16px;font-weight:900;color:#1E293B;letter-spacing:0.3px;">
-        <span leaf="">{{中文标题}}</span>
-      </p>
-      <p style="margin:0;font-size:11px;font-weight:600;color:#9CA3AF;letter-spacing:1.5px;">
-        <span leaf="">{{ENGLISH · 副标题}}</span>
+<section style="margin-top:48px;">
+  <section style="display:flex;align-items:center;margin-bottom:20px;">
+    <section style="background:#1B5BEE;padding:6px 15px;border-radius:4px;display:inline-block;">
+      <p style="font-size:15px;font-weight:700;color:#fff;letter-spacing:1px;margin:0;">
+        <span leaf="">{{章节编号}} · {{章节标题}}</span>
       </p>
     </section>
   </section>
 </section>
 ```
+
+**末章变体**（编号 `///`，PART 改为 `LAST`）：
+
+```html
+<section style="margin-top:48px;">
+  <section style="display:flex;align-items:center;margin-bottom:20px;">
+    <section style="background:#9CA3AF;padding:6px 15px;border-radius:4px;display:inline-block;">
+      <p style="font-size:15px;font-weight:700;color:#fff;letter-spacing:1px;margin:0;">
+        <span leaf="">/// · 写在最后</span>
+      </p>
+    </section>
+  </section>
+</section>
+```
+
+> **编号策略**：按 `##` 出现顺序自动分配 01/02/03…，末章用 `///`。英文标签（TUTORIAL / SUMMARY 等）作为可选项放在方形块内部，与中文标题用空格分隔。
 
 ---
 
@@ -226,13 +255,13 @@
 ### 6a. 蓝色加粗（核心概念、关键结论、品牌名）
 
 ```html
-<strong style="color:#2563EB;"><span leaf="">文字</span></strong>
+<strong style="color:#1B5BEE;"><span leaf="">文字</span></strong>
 ```
 
 ### 6b. 蓝色背景标签
 
 ```html
-<strong style="color:#2563EB;background:rgba(37,99,235,0.08);padding:0 4px;border-radius:2px;"><span leaf="">文字</span></strong>
+<strong style="color:#1B5BEE;background: rgba(27,91,238,0.08);padding:0 4px;border-radius:2px;"><span leaf="">文字</span></strong>
 ```
 
 ### 6c. 橙色渐变高亮（每段 ≤1-2 处）
@@ -293,7 +322,7 @@
 ```html
 <section style="margin-bottom:24px;">
   <section style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
-    <span style="display:inline-block;background:#2563EB;color:#fff;font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;"><span leaf="">STEP 01</span></span>
+    <span style="display:inline-block;background:#1B5BEE;color:#fff;font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;"><span leaf="">STEP 01</span></span>
     <h4 style="font-size:15px;font-weight:800;color:#1E293B;margin:0;"><span leaf="">{{步骤标题}}</span></h4>
   </section>
   <p style="font-size:14px;margin:0 0 16px;color:#4A3728;line-height:1.9;">{{步骤内容}}</p>
@@ -316,7 +345,7 @@
 ```html
 <section style="margin-bottom:28px;">
   <section style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
-    <span style="display:inline-block;background:#2563EB;color:#fff;font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;"><span leaf="">SKILL 1</span></span>
+    <span style="display:inline-block;background:#1B5BEE;color:#fff;font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;"><span leaf="">SKILL 1</span></span>
     <h4 style="font-size:15px;font-weight:800;color:#1E293B;margin:0;"><span leaf="">{{名称}}</span></h4>
   </section>
 </section>
@@ -330,7 +359,7 @@
 
 ```html
 <p style="font-size:13px;color:#4A3728;margin:0 0 16px;line-height:1.8;">
-  <span style="display:inline-block;background:#2563EB;color:#fff;font-size:11px;font-weight:700;padding:1px 7px;border-radius:3px;margin-right:6px;vertical-align:middle;letter-spacing:0.5px;"><span leaf="">PROMPT</span></span>
+  <span style="display:inline-block;background:#1B5BEE;color:#fff;font-size:11px;font-weight:700;padding:1px 7px;border-radius:3px;margin-right:6px;vertical-align:middle;letter-spacing:0.5px;"><span leaf="">PROMPT</span></span>
   <span style="font-size:12px;color:#9CA3AF;font-weight:700;"><span leaf="">{{提示词}}</span></span>
 </p>
 ```
@@ -346,31 +375,45 @@
 
 ### 8c. 多行代码块 → 用通用增量库
 
-多行代码块直接用 `common-components.md` 的 1a 深色代码块；浅色场景用 1b 并把左竖条换成 `#2563EB`。
+多行代码块直接用 `common-components.md` 的 1a 深色代码块；浅色场景用 1b 并把左竖条换成 `#1B5BEE`。
 
 ---
 
 ## 组件 9 引用与亮点
 
-### 9a. quote-box（蓝色竖条引用框）
+### 9a. quote-intro（双色边框引言框 - 推荐用于开篇引言）
+
+> **风格说明**：仿公众号实际排版风格——左边框蓝色 `#329DFC`，右边框暖橙色 `#FCDCB1`，底色 `#F2F9FF`。适合放在文章开头的引言段。
 
 ```html
-<section style="background:#F5F2ED;border-left:3px solid #2563EB;border-radius:4px;padding:12px 16px;margin-bottom:20px;">
+<section style="margin:0 20px 28px;">
+
+  <section style="background-color:#F2F9FF;border-left:2px solid #329DFC;border-right:2px solid #FCDCB1;padding:16px 18px;border-radius:8px;">
+    <p style="font-size:14px;margin:0;line-height:1.9;"><span leaf="">{{引言内容}}</span></p>
+  </section>
+
+</section>
+```
+
+### 9a-alt. quote-box（蓝色竖条引用框 - 用于正文中的引用段落）
+
+```html
+<section style="background:#F5F2ED;border-left:3px solid #1B5BEE;border-radius:4px;padding:12px 16px;margin:0 20px 20px;">
   <p style="font-size:13px;color:#4A3728;margin:0;line-height:1.7;">
     {{引用内容}}
   </p>
 </section>
 ```
 
-### 9b. oneliner-card（橙色亮点卡片）
+### 9b. oneliner-card（橙色重点卡片——纯色加粗，无下划线）
 
 单行版：
 
 ```html
-<section style="background:#FFF;border:1px solid #FDE68A;border-radius:10px;padding:14px 18px;margin-bottom:20px;text-align:center;">
+<section style="background:#FFF;border:1px solid #FDE68A;border-radius:10px;padding:14px 18px;margin:0 20px 20px;text-align:center;">
   <p style="font-size:12px;color:#9CA3AF;margin:0 0 6px;line-height:1.5;"><span leaf="">{{引导语}}</span></p>
   <p style="margin:0;line-height:1.6;">
-    <span style="font-size:15px;color:#D97706;font-weight:bold;border-bottom:3px solid #FDE68A;padding-bottom:2px;"><span leaf="">{{亮点内容}}</span></span>
+    <span style="font-size:15px;color:#D97706;font-weight:bold;"><span leaf="">{{亮点内容}}</span></span>
   </p>
 </section>
 ```
@@ -378,7 +421,7 @@
 ### 9c. subtitle-highlight（橙色底划线小节标题）
 
 ```html
-<p style="font-size:15px;font-weight:900;color:#1E293B;margin-bottom:16px;">
+<p style="font-size:15px;font-weight:900;color:#1E293B;margin:0 20px 16px;">
   <span style="background:linear-gradient(180deg,transparent 65%,#FDE68A 65%);padding:0 4px;"><span leaf="">{{小节标题}}</span></span>
 </p>
 ```
@@ -386,7 +429,7 @@
 ### 9d. center-divider（居中金句分隔）
 
 ```html
-<p style="font-size:14px;margin-bottom:20px;text-align:center;color:#2563EB;font-weight:700;letter-spacing:1px;border-top:1px solid #F5F2ED;border-bottom:1px solid #F5F2ED;padding:12px 0;">
+<p style="font-size:14px;margin:0 20px 20px;text-align:center;color:#1B5BEE;font-weight:700;letter-spacing:1px;border-top:1px solid #F5F2ED;border-bottom:1px solid #F5F2ED;padding:12px 0;">
   <span leaf="">{{居中金句}}</span>
 </p>
 ```
@@ -413,7 +456,7 @@
 ```html
 <section style="padding:6px 0 4px;margin-bottom:16px;">
   <p style="margin-bottom:6px;font-size:12px;font-weight:700;color:#9CA3AF;letter-spacing:1px;">
-    <span style="color:#2563EB;"><span leaf="">✦ {{提示标题}}</span></span>
+    <span style="color:#1B5BEE;"><span leaf="">✦ {{提示标题}}</span></span>
   </p>
   <p style="font-size:13px;color:#4A3728;margin:0;line-height:1.7;">{{提示内容}}</p>
 </section>
@@ -446,8 +489,8 @@
 ```html
 <section style="margin-bottom:14px;">
   <p style="margin:0 0 8px;font-size:14px;">
-    <span style="display:inline-block;font-size:13px;font-weight:700;color:#2563EB;background:rgba(37,99,235,0.06);padding:3px 10px;border-radius:999px;">
-      <span style="display:inline-block;width:6px;height:6px;background:#2563EB;border-radius:50%;margin-right:5px;vertical-align:middle;"><span leaf=""><br></span></span>
+    <span style="display:inline-block;font-size:13px;font-weight:700;color:#1B5BEE;background: rgba(27,91,238,0.06);padding:3px 10px;border-radius:999px;">
+      <span style="display:inline-block;width:6px;height:6px;background:#1B5BEE;border-radius:50%;margin-right:5px;vertical-align:middle;"><span leaf=""><br></span></span>
       <span leaf="">{{标题}}</span>
     </span>
   </p>
@@ -460,7 +503,7 @@
 ```html
 <section style="margin-bottom:24px;">
   <section style="display:flex;align-items:flex-start;gap:10px;margin-bottom:10px;">
-    <span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:#2563EB;color:#fff;font-size:11px;font-weight:700;border-radius:6px;flex-shrink:0;margin-top:2px;"><span leaf="">1</span></span>
+    <span style="display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:#1B5BEE;color:#fff;font-size:11px;font-weight:700;border-radius:6px;flex-shrink:0;margin-top:2px;"><span leaf="">1</span></span>
     <p style="font-size:14px;color:#4A3728;margin:0;line-height:1.9;flex:1;"><span leaf="">{{列表项内容}}</span></p>
   </section>
   <section style="display:flex;align-items:flex-start;gap:10px;">
@@ -477,9 +520,9 @@
   <table style="width:100%;border-collapse:collapse;font-size:13px;">
     <thead>
       <tr>
-        <th style="background:#2563EB;color:#fff;font-weight:700;padding:8px 12px;text-align:left;"><span leaf="">{{列标题1}}</span></th>
-        <th style="background:#2563EB;color:#fff;font-weight:700;padding:8px 12px;text-align:left;"><span leaf="">{{列标题2}}</span></th>
-        <th style="background:#2563EB;color:#fff;font-weight:700;padding:8px 12px;text-align:left;"><span leaf="">{{列标题3}}</span></th>
+        <th style="background:#1B5BEE;color:#fff;font-weight:700;padding:8px 12px;text-align:left;"><span leaf="">{{列标题1}}</span></th>
+        <th style="background:#1B5BEE;color:#fff;font-weight:700;padding:8px 12px;text-align:left;"><span leaf="">{{列标题2}}</span></th>
+        <th style="background:#1B5BEE;color:#fff;font-weight:700;padding:8px 12px;text-align:left;"><span leaf="">{{列标题3}}</span></th>
       </tr>
     </thead>
     <tbody>
@@ -526,7 +569,7 @@
   </section>
 </section>
 <p style="text-align:center;margin:0 0 24px;">
-  <span style="display:inline-block;background:#EFF6FF;color:#2563EB;font-size:11px;font-weight:700;padding:1px 8px;border-radius:4px;margin-right:6px;"><span leaf="">GIF 动图</span></span>
+  <span style="display:inline-block;background:#EFF6FF;color:#1B5BEE;font-size:11px;font-weight:700;padding:1px 8px;border-radius:4px;margin-right:6px;"><span leaf="">GIF 动图</span></span>
   <span style="font-size:12px;color:#9CA3AF;"><span leaf="">{{动图说明}}</span></span>
 </p>
 ```
@@ -535,7 +578,7 @@
 
 ## 组件 13 结尾组件
 
-### 13a. footer-cta（互动三连区，即签名/CTA 区）
+### 13a. footer-cta（互动三连区 - **可选**，默认不生成）
 
 ```html
 <section style="background:#FCFAF8;border:1px solid #E5DFD9;border-radius:12px;padding:24px 20px;text-align:center;margin:0 20px 24px;">
@@ -557,9 +600,9 @@
     </section>
     <section style="text-align:center;">
       <section style="width:36px;height:36px;display:flex;align-items:center;justify-content:center;margin:0 auto 4px;background:#EFF6FF;border-radius:10px;border:1px solid #BFDBFE;">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18v-4a8 8 0 0 1 8-8h8"></path><polyline points="16 2 20 6 16 10"></polyline></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1B5BEE" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18v-4a8 8 0 0 1 8-8h8"></path><polyline points="16 2 20 6 16 10"></polyline></svg>
       </section>
-      <span style="font-size:9px;font-weight:600;color:#2563EB;"><span leaf="">转发</span></span>
+      <span style="font-size:9px;font-weight:600;color:#1B5BEE;"><span leaf="">转发</span></span>
     </section>
   </section>
   <p style="font-size:9px;color:#9CA3AF;letter-spacing:1px;margin:0;"><span leaf="">THANKS FOR READING</span></p>
@@ -585,16 +628,18 @@
 ```html
 <section style="max-width:677px;margin:0 auto;background:#ffffff;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;color:#4A3728;line-height:1.75;letter-spacing:0.5px;overflow-x:hidden;">
 
-  <!-- 1. 封面（组件2，有图/无图二选一，推荐无图版） -->
+  <!-- 0. 关注引导横幅（组件1b follow-banner，可选，有GIF素材时建议加上） -->
+
+  <!-- 1. 封面（组件2 cover-breaking，默认不生成，仅在明确要求时加） -->
 
   <!-- 2. 目录（组件3 toc-scroll，2+ 章节时生成，紧跟封面之下） -->
 
-  <!-- 3. 开头引言（组件9b oneliner-card，文章有开头金句时） -->
+  <!-- 3. 开头引言（组件9a quote-intro 双色框，文章有开头金句时使用） -->
 
   <!-- 4. 前言正文（开场白，组件5 段落 × N） -->
 
-  <!-- 5. 第一章（组件4 chapter-title，margin-top:16px） -->
-  <!--    章内：组件5 正文 + 组件6 行内样式 + 组件7 标签 + 组件8 代码 + 组件9 引用亮点 + 组件10 提示 + 组件11 布局 + 组件12 媒体 -->
+  <!-- 5. 第一章（组件4 chapter-title，蓝底矩形块，margin-top:16px） -->
+  <!--    章内：组件5 正文 + 组件6 行内样式 + 组件7 标签 + 组件8 代码 + 组件9a-alt 引用 + 组件10 提示 + 组件11 布局 + 组件12 媒体 -->
 
   <!-- 6. 第二章…第N章（组件4，margin-top:48px） -->
 
@@ -602,19 +647,33 @@
 
   <!-- 8. 作者签名（组件5 段落，放在 footer-cta 前） -->
 
-  <!-- 9. 互动三连（组件13a footer-cta） -->
+  <!-- 9. 互动三连（组件13a footer-cta，默认不生成） -->
 
-  <!-- 10. 品牌尾图（组件13b，有素材才加） -->
+  <!-- 10. 品牌尾图（组件13b brand-card，有素材才加） -->
 
 </section>
 ```
 
 ---
 
-## 视觉层级（3 层递进）
+## 视觉层级（3 层递进 + 克制原则）
 
 | 层级 | 样式 | 用途 | 频率 |
 |------|------|------|------|
+| **锚点层** | 蓝色加粗 6a / 橙色亮点卡 9b | 核心概念、产品名、关键结论 | 全文 ≤5 处 |
+| **标记层** | 蓝色下划线 6e（默认） | 正文关键词强调 | 全文 ≤5 处，非"每段必标" |
+| **容器层** | 双色引言框 9a / 蓝色竖条引用 9a-alt / 提示 10x / 胶囊 11a | 引用、旁注、提示 | 按需 |
+
+**克制原则（更新版）**：
+- 蓝色加粗全文 ≤5 处，只标核心概念
+- 蓝色下划线全文 ≤5 处，只标关键数据/结论（区别于原版的"每段1-3处"）
+- 橙色高亮每段 ≤1-2 处，仅用于特别强调
+- 红色下划线只用于对比/否定
+- **总体原则：少即是多。宁可少标，不要过标。**
+
+---
+
+--|------|------|------|
 | **锚点层** | 蓝色加粗 6a / 橙色亮点卡 9b | 核心概念、产品名、关键结论 | 全文 ≤5 处 |
 | **标记层** | 蓝色下划线 6e（默认）/ 橙色渐变高亮 6c | 正文关键词强调 | 每段 1~3 处 |
 | **容器层** | 蓝色竖条引用 9a / 提示 10x / 胶囊 11a | 引用、旁注、提示 | 按需 |
@@ -629,17 +688,18 @@
 
 ## 文章类型 → 组件组合配方
 
-| 文章类型 | 核心组件组合 | 点缀组件 |
-|----------|------------|---------|
-| 教程/操作指南 | step-label 7a + cmd/prompt 8a/8b + 代码块（通用库1a） | warn-tip 10a、blue-tip 10b |
-| 盘点/工具清单 | skill/tool-label 7c + pill-list 11a | table 11c、oneliner-card 9b |
-| 观点/深度分析 | paragraph 5 + quote-box 9a + oneliner-card 9b | center-divider 9d、subtitle-highlight 9c |
-| 访谈/人物特稿 | paragraph 5 + quote-box 9a + ordered-list 11b | oneliner-card 9b、center-divider 9d |
-| 数据复盘/报告 | table 11c + ordered-list 11b | blue-info 10d、橙色高亮 6c |
-| 生活/情感随笔 | paragraph 5 + oneliner-card 9b + center-divider 9d | quote-box 9a（少量） |
-| 案例实战 | case-label 7b + step-label 7a | prompt-block 8a、orange-warning 10c |
+| 文章类型 | 核心组件组合 | 点缀组件 | 典型示例 |
+|----------|-------------|---------|---------|
+| AI 教程/实战指南 | 关注引导 1b + 引言框 9a + 蓝底标题 4 + step-label 7a + cmd/prompt 8a/8b + 代码块（通用库1a） | warn-tip 10a、blue-tip 10b | 用百炼搭建企业知识库 |
+| AI 观点/深度分析 | 关注引导 1b + 引言框 9a + 蓝底标题 4 + paragraph 5 + quote-box 9a-alt + oneliner-card 9b | center-divider 9d、subtitle-highlight 9c | 企业AI落地半年观察 |
+| AI 盘点/工具清单 | 关注引导 1b + 蓝底标题 4 + skill/tool-label 7c + pill-list 11a + 表格 11c | oneliner-card 9b、代码块 1a | Matt Pocock Skills 全集 |
+| 教程/操作指南 | step-label 7a + cmd/prompt 8a/8b + 代码块（通用库1a） | warn-tip 10a、blue-tip 10b | — |
+| 盘点/工具清单 | skill/tool-label 7c + pill-list 11a | table 11c、oneliner-card 9b | — |
+| 访谈/人物特稿 | paragraph 5 + quote-box 9a-alt + ordered-list 11b | oneliner-card 9b、center-divider 9d | — |
+| 数据复盘/报告 | table 11c + ordered-list 11b | blue-info 10d、橙色高亮 6c | — |
+| 案例实战 | case-label 7b + step-label 7a | prompt-block 8a、orange-warning 10c | — |
 
-所有类型共用固定结构：封面 2 + 目录 3 + 章节标题 4 + 签名/三连 13。
+所有类型共用固定结构：关注引导 1b（可选）+ 引言框 9a（有金句时）+ 蓝底标题 4 + 签名段落。
 
 ---
 
@@ -648,22 +708,22 @@
 | Markdown 元素 | 对应组件 | 说明 |
 |---|---|---|
 | `# 标题` | 不使用 | 公众号文章标题在平台设置 |
-| 文章开头 `> 引言` | 组件 9b oneliner-card | 开头金句 |
-| `## 章节标题` | 组件 4 chapter-title | PART 01/02/03…，末章 /// + LAST |
+| 文章开头 `> 引言` | 组件 9a quote-intro | 双色边框引言框（推荐）|
+| `## 章节标题` | 组件 4 chapter-title（蓝底白字） | 蓝底矩形块，首章 margin-top:16px，后续 48px |
 | `### 子标题` | 组件 9c subtitle-highlight | 橙色底划线小节标题 |
-| 普通段落 | 组件 5 paragraph | 每段标 1~3 处蓝色下划线 6e |
+| 普通段落 | 组件 5 paragraph | 蓝色下划线 6e 仅标全文 ≤5 处关键点 |
 | `**加粗文字**` | 组件 6a 蓝色加粗 | 核心概念/品牌名 |
-| `==高亮文字==` | 组件 6c 橙色渐变高亮 | 每段 ≤2 处 |
+| `==高亮文字==` | 组件 6c 橙色渐变高亮 | 每段 ≤1 处 |
 | `<u>下划线</u>` / `++文字++` | 组件 6e 蓝色下划线 | 次要强调 |
 | `~~删除线~~` | 组件 6i 删除线灰色 | 被淘汰的概念 |
-| `> 引用段落`（非开头） | 组件 9a quote-box | 蓝色竖条引用 |
+| `> 引用段落`（非开头） | 组件 9a-alt quote-box | 蓝色竖条引用 |
 | 核心金句 | 组件 9b oneliner-card / 9d center-divider | 视觉焦点 |
 | 操作步骤 | 组件 7a step-label | STEP 01/02… |
 | 案例/场景 | 组件 7b case-label | CASE 01/02… |
 | 技能/工具清单 | 组件 7c skill/tool-label | 蓝色标签 |
 | Prompt 提示词 | 组件 8a prompt-block（短）/ 通用库 1a（长多行） | |
 | 单行命令 | 组件 8b cmd-block | |
-| 多行代码块 | 通用库 1a 深色（默认）/ 1b 浅色（左竖条换 #2563EB） | |
+| 多行代码块 | 通用库 1a 深色（默认）/ 1b 浅色（左竖条换 #1B5BEE） | |
 | 行内代码 | 组件 6g 代码标签 | |
 | 并列要点 | 组件 11a pill-list | 蓝色胶囊 |
 | Markdown 表格 | 组件 11c table | 蓝色表头，偶数行暖灰底 |
@@ -672,4 +732,7 @@
 | 亮点提示 | 组件 10b blue-tip / 10d blue-info | |
 | `![](图片)` | 组件 12a image | 原图代码保留 |
 | `![](xxx.gif)` | 组件 12b GIF 动图 | 加动图角标 |
-| 文末 | 组件 13a footer-cta（+ 13b brand-card） | 签名段落放 footer-cta 前 |
+| 文末 | 组件 5 paragraph（签名）+ 组件13a footer-cta（可选） | 签名段落放 footer-cta 前 |
+
+---
+

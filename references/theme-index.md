@@ -4,7 +4,7 @@
 
 | 主题 | 主色 | 适用场景 | 组件库文件 | 正文下划线 CSS |
 |------|------|---------|-----------|---------------|
-| 蓝橙简约 | `#2563EB` 蓝 | 教程、深度分析、观点、测评、知识整理（简约克制，蓝橙棕三色，留白充沛） | `references/theme-blue-warm.md` | `border-bottom:2px solid #BFDBFE;font-weight:600;` |
+| 蓝橙简约 | `#1B5BEE` 蓝 | 教程、深度分析、观点、测评、知识整理（简约克制，蓝橙棕三色，留白充沛） | `references/theme-blue-warm.md` | `border-bottom:2px solid #BFDBFE;font-weight:600;` |
 
 ## 选择建议
 

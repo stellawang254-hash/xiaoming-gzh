@@ -1,23 +1,23 @@
 # xiaoming-gzh · 公众号排版 Skill
 
-基于 [isjiamu/gzh-design-skill](https://github.com/isjiamu/gzh-design-skill)（AGPL-3.0）的个人定制版。
+公众号文章排版引擎，将 Markdown 转换为可直接粘贴到公众号编辑器的 HTML。
 
-**内置主题：蓝橙简约** — 蓝色 `#2563EB` / 橙色 `#D97706` / 暖棕 `#4A3728`，简约克制，留白充沛。
+**内置主题：蓝橙简约** — 主色 `#1B5BEE` 蓝 / `#D97706` 橙 / `#4A3728` 棕，章节标题用蓝底白字矩形块，引言框用双色边框。
 
-把 Markdown/Word/PDF/纯文本 一键排成可直接粘贴到微信公众号编辑器的 HTML。
+支持 Markdown / Word(.docx) / PDF / 纯文本输入，自动排版生成可直接粘贴到微信公众号编辑器的 HTML。
 
 ## 快速使用
 
 ```
-把 article.md 排成公众号 HTML，用蓝橙简约主题
+把 article.md 排成公众号 HTML
 ```
 
 ## 主题
 
 | 主题 | 主色 | 适用场景 |
 |------|------|---------|
-| 蓝橙简约 | `#2563EB` 蓝 / `#D97706` 橙 / `#4A3728` 棕 | 教程、深度分析、观点、知识整理 |
+| 蓝橙简约 | `#1B5BEE` 蓝 / `#D97706` 橙 / `#4A3728` 棕 | AI 教程、观点分析、工具盘点、知识整理 |
 
 ## License
 
-AGPL-3.0 © 2026 stellawang254-hash · 基于 [isjiamu/gzh-design-skill](https://github.com/isjiamu/gzh-design-skill) 定制
+AGPL-3.0 © 2026 stellawang254-hash
